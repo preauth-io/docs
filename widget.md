@@ -39,7 +39,7 @@ preauth("start");
 <html>
 <head>
   <script type="text/javascript">
-    !function(e,t){window.PreauthObject=t,window[t]=window[t]||function(){(window[t].q=window[t].q||[]).push(arguments)};const n="script",o=document.createElement(n),c=document.getElementsByTagName(n)[0];o.async=1,o.src=e,c.parentNode.insertBefore(o,c)}("https://dev-cdn.preauth.io/preauth.js","preauth");
+    !function(e,t){window.PreauthObject=t,window[t]=window[t]||function(){(window[t].q=window[t].q||[]).push(arguments)};const n="script",o=document.createElement(n),c=document.getElementsByTagName(n)[0];o.async=1,o.src=e,c.parentNode.insertBefore(o,c)}("https://cdn.preauth.io/preauth.js","preauth");
 
     preauth("init", {
       order: "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
