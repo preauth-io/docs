@@ -201,7 +201,7 @@ Flag para preautorizar el monto restante
 
 #### OrderStatus
 
-| Attributo                     |                                                                                          |
+| Attributo                     | Descripción                                                                              |
 | ----------------------------- | ---------------------------------------------------------------------------------------- |
 | created                       | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado.                 |
 | in\_progress                  | Cuando la orden ya cuenta con una tarjeta asociada.                                      |

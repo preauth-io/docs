@@ -14,6 +14,10 @@ Verifica que tengas un api-token en el [apartado para desarrolladores](https://d
 
 Para crear tu primera orden haz una petición al método crear orden de nuestro [API REST](api-rest.md#crear-orden).
 
+{% hint style="warning" %}
+No te olvides de usar el api-token que obtuviste en el paso anterior y de personalizar el cuerpo de la petición.
+{% endhint %}
+
 ```bash
 curl -X POST  https://api.preauth.io/v1/order -H "Accept: application/json" -H "x-auth-token: token_test_a4a9f278n4c23f08e7e6" -H "content-type: application/json" -d "{\"currency\":\"PEN\",\"country\":\"PE\",\"amount\":15000,\"reference\":\"order_00001\",\"limit_date\":\"2022-10-10\"}"
 ```
@@ -72,6 +76,10 @@ Este paso hace que se le muestre el formulario de **preauth** al usuario de tu w
 
 ### 5 Verifica el estado de tu orden
 
+{% hint style="warning" %}
+No te olvides de usar tu api-token.
+{% endhint %}
+
 ```bash
 curl -X GET  https://api.preauth.io/v1/order/4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK -H "Accept: application/json" -H "x-auth-token: token_test_a4a9f278n4c23f08e7e6"
 ```
@@ -94,4 +102,4 @@ curl -X GET  https://api.preauth.io/v1/order/4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgL
 }
 ```
 
-Si todo ha salido bien, puedes verificar que el estado cambió a "in\_progress" y la orden estará preautorizada hasta que se cumpla la fecha límite definida en el paso 3.
+Si todo ha salido bien, puedes verificar que el estado cambió a **"in\_progress"** y la orden estará preautorizada hasta que se cumpla la fecha límite definida en el paso 3.
