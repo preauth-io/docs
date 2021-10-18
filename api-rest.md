@@ -4,7 +4,7 @@
 
 Para tener acceso a los servicios es necesario haber obtenido el api-token para ser usado como cabecera en cada petición. Para más información, puedes revisar como obtener el api-token en la guía de [Primeros pasos](primeros-pasos.md#2-verifica-que-tengas-tu-api-token).
 
-Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-auth-token"**.
+Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-auth-token" **en cada petición que quieras hacer.
 
 ### Servicios
 

@@ -26,7 +26,7 @@ preauth("init", {
 
 ### Mostrando widget
 
-Para mostrar el widget solo necesitas mandar **"start"** como se muestra a continuación:
+Para mostrar el widget solo necesitas enviar el texto **"start"** como se muestra a continuación:
 
 ```javascript
 preauth("start");

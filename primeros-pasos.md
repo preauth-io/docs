@@ -4,21 +4,21 @@
 
 Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes nuestro [formulario de registro](https://dashboard.preauth.io/register).
 
-### 2 Verifica que tengas tu api-token
+### 2 Obtén tu api-token
 
-Para realizar tus pruebas verifica que tengas un api-token en el [apartado para desarrolladores](https://dashboard.preauth.io/panel/devs).
+Verifica que tengas un api-token en el [apartado para desarrolladores](https://dashboard.preauth.io/panel/devs).
 
 ![](.gitbook/assets/image.png)
 
 ### 3 Crea tu primera orden
 
-Para crear tu primera orden haz un request al método de crear orden de nuestro [API REST](api-rest.md#crear-orden).
+Para crear tu primera orden haz una petición al método crear orden de nuestro [API REST](api-rest.md#crear-orden).
 
 ```bash
 curl -X POST  https://api.preauth.io/v1/order -H "Accept: application/json" -H "x-auth-token: token_test_a4a9f278n4c23f08e7e6" -H "content-type: application/json" -d "{\"currency\":\"PEN\",\"country\":\"PE\",\"amount\":15000,\"reference\":\"order_00001\",\"limit_date\":\"2022-10-10\"}"
 ```
 
-Es importante que tengas en cuenta que el campo id es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**. Para mayor detalle puedes revisar la documentación de nuestra [API REST](api-rest.md#servicios).
+Es importante que tengas en cuenta que el campo id de la respuesta es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**. Para mayor detalle puedes revisar la documentación de nuestra [API REST](api-rest.md#servicios).
 
 ORDER:
 
@@ -38,7 +38,7 @@ ORDER:
 }
 ```
 
-### 4 Muestra nuestro widget en tu web
+### 4 Muestra nuestro widget
 
 #### 4.1 Carga nuestro SDK
 
@@ -68,7 +68,7 @@ Se deben definir el {{order\_id}} (obtenido en el paso 3) y las funciones que se
 preauth("start");
 ```
 
-Este paso hace que se le muestre el formulario de **preauth** al usuario de su web. Una vez que el usuario termine de ingresar la información de su tarjeta, el SDK invocará a la función **onSuccess **u **onError **según sea el caso. Para más información, puedes revisar la documentación de nuestro [widget](widget.md).
+Este paso hace que se le muestre el formulario de **preauth** al usuario de tu web. Una vez que el usuario termine de ingresar la información de su tarjeta, el SDK invocará a la función **onSuccess **u **onError **según sea el caso. Para más información, puedes revisar la documentación de nuestro [widget](widget.md).
 
 ### 5 Verifica el estado de tu orden
 
