@@ -2,7 +2,7 @@
 
 ### 1 Registra tu compañía
 
-Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes nuestro[ formulario de registro](https://dashboard.preauth.io/register).
+Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes nuestro [formulario de registro](https://dashboard.preauth.io/register).
 
 ### 2 Verifica que tengas tu api-token
 
@@ -12,13 +12,13 @@ Para realizar tus pruebas verifica que tengas un api-token en el [apartado para 
 
 ### 3 Crea tu primera orden
 
-Para crear tu primera orden haz un request al método de crear orden de nuestro [API REST](api-rest.md).
+Para crear tu primera orden haz un request al método de crear orden de nuestro [API REST](api-rest.md#crear-orden).
 
 ```bash
 curl -X POST  https://api.preauth.io/v1/order -H "Accept: application/json" -H "x-auth-token: token_test_a4a9f278n4c23f08e7e6" -H "content-type: application/json" -d "{\"currency\":\"PEN\",\"country\":\"PE\",\"amount\":15000,\"reference\":\"order_00001\",\"limit_date\":\"2022-10-10\"}"
 ```
 
-Es importante que tengas en cuenta que el campo id es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**. Para mayor detalle puedes revisar la documentación de nuestra [API REST](api-rest.md).
+Es importante que tengas en cuenta que el campo id es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**. Para mayor detalle puedes revisar la documentación de nuestra [API REST](api-rest.md#servicios).
 
 ORDER:
 
@@ -60,7 +60,7 @@ preauth("init", {
 });
 ```
 
-Se deben definir el {{order_id}} (obtenido en el paso 3) y las funciones que se ejecutarán en caso de error o éxito.
+Se deben definir el {{order\_id}} (obtenido en el paso 3) y las funciones que se ejecutarán en caso de error o éxito.
 
 #### 4.3 Muestra el widget
 
@@ -94,4 +94,4 @@ curl -X GET  https://api.preauth.io/v1/order/4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgL
 }
 ```
 
-Si todo ha salido bien, puedes verificar que el estado cambió a "in_progress" y la orden estará preautorizada hasta que se cumpla la fecha límite definida en el paso 3.
+Si todo ha salido bien, puedes verificar que el estado cambió a "in\_progress" y la orden estará preautorizada hasta que se cumpla la fecha límite definida en el paso 3.

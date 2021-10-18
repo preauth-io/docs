@@ -8,10 +8,9 @@ Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-au
 
 ### Servicios
 
-#### Crear orden
-
-{% swagger method="post" path="/order" baseUrl="https://api.preauth.io/v1" summary="" %}
+{% swagger method="post" path="/order" baseUrl="https://api.preauth.io/v1" summary="Crear orden" %}
 {% swagger-description %}
+
 {% endswagger-description %}
 
 {% swagger-parameter in="body" required="true" name="country" type="String" %}
@@ -35,9 +34,7 @@ Fecha límite de la orden
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
-Api token 
-{% endswagger-parameter %}
-
+Api token
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Modelo Order" %}
@@ -59,14 +56,13 @@ Api token
 {% endswagger-response %}
 {% endswagger %}
 
-#### Obtener orden
-
-{% swagger method="get" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="" %}
+{% swagger method="get" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Obtener orden" %}
 {% swagger-description %}
+
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
-Api token 
+Api token
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="id" required="true" %}
@@ -92,14 +88,13 @@ Id de la orden
 {% endswagger-response %}
 {% endswagger %}
 
-#### Actualizar orden
-
-{% swagger method="patch" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="" %}
+{% swagger method="patch" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Actualizar orden" %}
 {% swagger-description %}
+
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
-Api token 
+Api token
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="id" required="true" %}
@@ -133,14 +128,13 @@ Fecha límite de la orden, se puede editar según la fecha de expiración de la 
 {% endswagger-response %}
 {% endswagger %}
 
-#### Cancelar orden
-
-{% swagger method="delete" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="" %}
+{% swagger method="delete" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Cancelar orden" %}
 {% swagger-description %}
+
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
-Api token 
+Api token
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="id" required="true" %}
@@ -156,14 +150,13 @@ Id de la orden
 {% endswagger-response %}
 {% endswagger %}
 
-#### Capturar orden
-
-{% swagger method="post" path="/order/{id}/capture" baseUrl="https://api.preauth.io/v1" summary="" %}
+{% swagger method="post" path="/order/{id}/capture" baseUrl="https://api.preauth.io/v1" summary="Capturar orden" %}
 {% swagger-description %}
+
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
-Api token 
+Api token
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="id" required="true" %}
@@ -189,3 +182,37 @@ Flag para preautorizar el monto restante
 {% endswagger %}
 
 ### Modelos
+
+#### Order
+
+| Attributo       | Tipo        | Descripción                                                              | Ejemplo                                            |
+| --------------- | ----------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
+| id              | Text        | Identificador de la orden                                                | 4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK |
+| reference       | Text        | Referencia del comercio                                                  | order\_0001                                        |
+| currency\_id    | Text        | ISO 4217                                                                 | PEN                                                |
+| country\_id     | Text        | ISO 3166-1 alpha-2                                                       | PE                                                 |
+| limit\_date     | Text        | Fecha límite, pasada esta fecha se liberará el valor del pending\_amount | 2022-10-10                                         |
+| amount          | Integer     | Monto en centavos                                                        | 15000                                              |
+| status          | OrderStatus | Ver OrderStatus                                                          | created                                            |
+| pending\_amount | Integer     | Monto en centavos de lo que debe mantenerse preautorizado                | 15000                                              |
+| capture\_amount | Integer     | Monto en centavos de lo que se ha ido capturando                         | 0                                                  |
+| created\_at     | Text        | Fecha de creación de la orden                                            | 2021-10-15 20:31:07                                |
+| update\_at      | Text        | Última fecha de actualización de la orden                                | 2021-10-15 20:35:28                                |
+
+#### OrderStatus
+
+| Attributo                     |                                                                                          |
+| ----------------------------- | ---------------------------------------------------------------------------------------- |
+| created                       | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado.                 |
+| in\_progress                  | Cuando la orden ya cuenta con una tarjeta asociada.                                      |
+| canceled                      | Cuando el comercio solicitó la cancelación.                                              |
+| finished                      | Cuando la fecha límite ya pasó.                                                          |
+| desynchronized                | Cuando por alguna razón la preautorización se perdió temporalmente.                      |
+| finished\_and\_desynchronized | Cuando por alguna razón la preautorización se  perdió temporalmente y la orden finalizó. |
+
+#### CaptureResult
+
+| Attributo | Tipo              | Descripción                                                                                                                                           | Ejemplo                                                                                                                |
+| --------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| status    | "OK" \| "WARNING" | Devuelve "OK" si todo el proceso finaliza bien o "WARNING" cuando pasa algo inesperado en el proceso y es necesario que verifiquemos de nuestro lado. | WARNING                                                                                                                |
+| messages  | Text\[]           | Mensaje que refleja el resultado del proceso.                                                                                                         | \["Order is desynchronized because there were some problems whit some transactions. We will try to fix this shortly."] |
