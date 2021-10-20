@@ -74,8 +74,15 @@ preauth("start");
 
 #### PreauthError
 
-| Attributo | Tipo | Descripción | Ejemplo |
-| --------- | ---- | ----------- | ------- |
-| code      |      |             |         |
-| TBD       |      |             |         |
+| Attributo | Tipo             | Descripción                          | Ejemplo              |
+| --------- | ---------------- | ------------------------------------ | -------------------- |
+| code      | PreauthErrorCode | Código de error interno.             | 100                  |
+| message   | Text             | Mensaje asociado al código de error. | Modal closed by user |
 
+#### PreauthErrorCode
+
+| Código | Descripción                                               |
+| ------ | --------------------------------------------------------- |
+| 100    | Cuando el widget es cerrado.                              |
+| 101    | Cuando el widget no ha cargado correctamente.             |
+| 102    | Cuando sucede algún error al realizar la preautorización. |
