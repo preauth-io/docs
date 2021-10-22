@@ -1,3 +1,7 @@
+---
+description: Intégranos en tu página y disfruta de la magia.
+---
+
 # Widget
 
 ### Insertando SDK

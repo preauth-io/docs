@@ -1,16 +1,22 @@
+---
+description: >-
+  En 5 pasos habrás aprendido cómo funciona Preauth y seguramente terminaste con
+  gran parte de la integración. Disfruta el camino.
+---
+
 # Primeros pasos
 
-### 1 Registra tu compañía
+### 1. Registra tu compañía
 
 Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes nuestro [formulario de registro](https://dashboard.preauth.io/register).
 
-### 2 Obtén tu api-token
+### 2. Obtén tu api-token
 
 Verifica que tengas un api-token en el [apartado para desarrolladores](https://dashboard.preauth.io/panel/devs).
 
 ![](.gitbook/assets/image.png)
 
-### 3 Crea tu primera orden
+### 3. Crea tu primera orden
 
 Para crear tu primera orden haz una petición al método crear orden de nuestro [API REST](api-rest.md#crear-orden).
 
@@ -42,7 +48,7 @@ ORDER:
 }
 ```
 
-### 4 Muestra nuestro widget
+### 4. Muestra nuestro widget
 
 #### 4.1 Carga nuestro SDK
 
@@ -74,7 +80,7 @@ preauth("start");
 
 Este paso hace que se le muestre el formulario de **preauth** al usuario de tu web. Una vez que el usuario termine de ingresar la información de su tarjeta, el SDK invocará a la función **onSuccess **u **onError **según sea el caso. Para más información, puedes revisar la documentación de nuestro [widget](widget.md).
 
-### 5 Verifica el estado de tu orden
+### 5. Verifica el estado de tu orden
 
 {% hint style="warning" %}
 No te olvides de usar tu api-token.

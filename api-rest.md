@@ -1,3 +1,9 @@
+---
+description: >-
+  Aprendamos cómo funciona el API. Sabemos que suele ser dolorosa esta parte,
+  pero tranquila, estamos contigo para cualquier duda en devs@preauth.io
+---
+
 # API REST
 
 ### Autenticación
