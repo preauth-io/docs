@@ -28,7 +28,10 @@ No te olvides de usar el api-token que obtuviste en el paso anterior y de person
 curl -X POST  https://api.preauth.io/v1/order -H "Accept: application/json" -H "x-auth-token: token_test_a4a9f278n4c23f08e7e6" -H "content-type: application/json" -d "{\"currency\":\"PEN\",\"country\":\"PE\",\"amount\":15000,\"reference\":\"order_00001\",\"limit_date\":\"2022-10-10\"}"
 ```
 
-Es importante que tengas en cuenta que el campo id de la respuesta es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**. Para mayor detalle puedes revisar la documentación de nuestra [API REST](api-rest.md#servicios).
+Es importante que tengas en cuenta que el campo id de la respuesta es con el que podrás hacer las demás operaciones. Además, puedes ver que por el momento el estado de la orden es **"created"**.
+
+* Interactuar con la orden [usando sus servicios](api-rest.md#servicios).
+* Identifica [cada atributo y estado de la orden](api-rest.md#modelos).
 
 ORDER:
 
@@ -49,6 +52,8 @@ ORDER:
 ```
 
 ### 4. Muestra nuestro widget
+
+[¡Tenemos un ejemplo!](widget.md#ejemplo-completo)
 
 #### 4.1 Carga nuestro SDK
 
