@@ -39,8 +39,8 @@ ORDER:
 {
   "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
   "reference": "order_00001",
-  "currency_id": "PEN",
-  "country_id": "PE",
+  "currency": "PEN",
+  "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
   "status": "created",
@@ -83,7 +83,7 @@ Se deben definir el {{order\_id}} (obtenido en el paso 3) y las funciones que se
 preauth("start");
 ```
 
-Este paso hace que se le muestre el formulario de **preauth** al usuario de tu web. Una vez que el usuario termine de ingresar la información de su tarjeta, el SDK invocará a la función **onSuccess **u **onError **según sea el caso. Para más información, puedes revisar la documentación de nuestro [widget](widget.md).
+Este paso hace que se le muestre el formulario de **preauth** al usuario de tu web. Una vez que el usuario termine de ingresar la información de su tarjeta, el SDK invocará a la función **onSuccess** u **onError** según sea el caso. Para más información, puedes revisar la documentación de nuestro [widget](widget.md).
 
 ### 5. Verifica el estado de tu orden
 
@@ -101,8 +101,8 @@ curl -X GET  https://api.preauth.io/v1/order/4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgL
 {
   "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
   "reference": "order_00001",
-  "currency_id": "PEN",
-  "country_id": "PE",
+  "currency": "PEN",
+  "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
   "status": "in_progress",

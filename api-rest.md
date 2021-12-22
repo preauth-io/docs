@@ -10,7 +10,7 @@ description: >-
 
 Para tener acceso a los servicios es necesario haber obtenido el api-token para ser usado como cabecera en cada petición. Para más información, puedes revisar como obtener el api-token en la guía de [Primeros pasos](primeros-pasos.md#2-verifica-que-tengas-tu-api-token).
 
-Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-auth-token" **en cada petición que quieras hacer.
+Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-auth-token"** en cada petición que quieras hacer.
 
 ### Servicios
 
@@ -48,8 +48,8 @@ Api token
 {
   "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
   "reference": "order_00001",
-  "currency_id": "PEN",
-  "country_id": "PE",
+  "currency": "PEN",
+  "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
   "status": "in_progress",
@@ -80,8 +80,8 @@ Id de la orden
 {
   "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
   "reference": "order_00001",
-  "currency_id": "PEN",
-  "country_id": "PE",
+  "currency": "PEN",
+  "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
   "status": "in_progress",
@@ -120,8 +120,8 @@ Fecha límite de la orden, se puede editar según la fecha de expiración de la 
 {
   "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
   "reference": "order_00001",
-  "currency_id": "PEN",
-  "country_id": "PE",
+  "currency": "PEN",
+  "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
   "status": "in_progress",
@@ -150,7 +150,7 @@ Id de la orden
 {% swagger-response status="200: OK" description="" %}
 ```javascript
 {
-  "message": "The order will be canceled in a few moments."
+  "status": "OK"
 }
 ```
 {% endswagger-response %}
@@ -177,11 +177,10 @@ Monto en centavos, solo puede ser menor o igual a order.pending_amount
 Flag para preautorizar el monto restante
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Modelo CaptureResult" %}
+{% swagger-response status="200: OK" description="" %}
 ```javascript
 {
-  "status": "OK",
-  "messages": []
+  "status": "OK"
 }
 ```
 {% endswagger-response %}
@@ -195,8 +194,8 @@ Flag para preautorizar el monto restante
 | --------------- | ----------- | ------------------------------------------------------------------------ | -------------------------------------------------- |
 | id              | Text        | Identificador de la orden                                                | 4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK |
 | reference       | Text        | Referencia del comercio                                                  | order\_0001                                        |
-| currency\_id    | Text        | ISO 4217                                                                 | PEN                                                |
-| country\_id     | Text        | ISO 3166-1 alpha-2                                                       | PE                                                 |
+| currency        | Text        | ISO 4217                                                                 | PEN                                                |
+| country         | Text        | ISO 3166-1 alpha-2                                                       | PE                                                 |
 | limit\_date     | Text        | Fecha límite, pasada esta fecha se liberará el valor del pending\_amount | 2022-10-10                                         |
 | amount          | Integer     | Monto en centavos                                                        | 15000                                              |
 | status          | OrderStatus | Ver OrderStatus                                                          | created                                            |
@@ -207,18 +206,9 @@ Flag para preautorizar el monto restante
 
 #### OrderStatus
 
-| Attributo                     | Descripción                                                                              |
-| ----------------------------- | ---------------------------------------------------------------------------------------- |
-| created                       | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado.                 |
-| in\_progress                  | Cuando la orden ya cuenta con una tarjeta asociada.                                      |
-| canceled                      | Cuando el comercio solicitó la cancelación.                                              |
-| finished                      | Cuando la fecha límite ya pasó.                                                          |
-| desynchronized                | Cuando por alguna razón la preautorización se perdió temporalmente.                      |
-| finished\_and\_desynchronized | Cuando por alguna razón la preautorización se  perdió temporalmente y la orden finalizó. |
-
-#### CaptureResult
-
-| Attributo | Tipo              | Descripción                                                                                                                                           | Ejemplo                                                                                                                |
-| --------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| status    | "OK" \| "WARNING" | Devuelve "OK" si todo el proceso finaliza bien o "WARNING" cuando pasa algo inesperado en el proceso y es necesario que verifiquemos de nuestro lado. | WARNING                                                                                                                |
-| messages  | Text\[]           | Mensaje que refleja el resultado del proceso.                                                                                                         | \["Order is desynchronized because there were some problems whit some transactions. We will try to fix this shortly."] |
+| Attributo    | Descripción                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| created      | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado. |
+| in\_progress | Cuando la orden ya cuenta con una tarjeta asociada.                      |
+| canceled     | Cuando el comercio solicitó la cancelación.                              |
+| finished     | Cuando la fecha límite ya pasó.                                          |
