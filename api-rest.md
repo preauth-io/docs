@@ -118,17 +118,7 @@ Fecha límite de la orden, se puede editar según la fecha de expiración de la 
 {% swagger-response status="200: OK" description="Modelo Order" %}
 ```javascript
 {
-  "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
-  "reference": "order_00001",
-  "currency": "PEN",
-  "country": "PE",
-  "limit_date": "2022-10-10",
-  "amount": 15000,
-  "status": "in_progress",
-  "pending_amount": 15000,
-  "captured_amount": 0,
-  "created_at": "2021-10-15 20:31:07",
-  "updated_at": "2021-10-15 20:35:28"
+  "status": "OK"
 }
 ```
 {% endswagger-response %}
