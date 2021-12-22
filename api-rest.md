@@ -115,7 +115,7 @@ Monto en centavos, solo puede ser menor a order.pending_amount
 Fecha límite de la orden, se puede editar según la fecha de expiración de la tarjeta asociada
 {% endswagger-parameter %}
 
-{% swagger-response status="200: OK" description="Modelo Order" %}
+{% swagger-response status="200: OK" description="" %}
 ```javascript
 {
   "status": "OK"
