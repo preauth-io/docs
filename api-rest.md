@@ -39,8 +39,44 @@ Referencia del comercio
 Fecha límite de la orden
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="client.phone" %}
+Formato E.123
+{% endswagger-parameter %}
+
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
 Api token
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="client.documentType" %}
+Tipo de documento
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="client.document" %}
+Alfanumérico del documento
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="client.email" type="String" %}
+RFC 5322
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="product.title" %}
+Nombre del producto/servicio
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="billing.address" %}
+Dirección del cliente
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="billing.city" %}
+Ciudad del cliente
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="billing.region" %}
+Región del cliente
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="billing.country" %}
+País del cliente
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="Modelo Order" %}
