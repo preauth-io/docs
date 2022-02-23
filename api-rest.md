@@ -39,7 +39,7 @@ Referencia del comercio
 Fecha límite de la orden
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.phone" %}
+{% swagger-parameter in="body" name="client.phone" type="String" %}
 Formato E.123
 {% endswagger-parameter %}
 
@@ -47,11 +47,11 @@ Formato E.123
 Api token
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.documentType" %}
+{% swagger-parameter in="body" name="client.documentType" type="String" %}
 Tipo de documento
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.document" %}
+{% swagger-parameter in="body" name="client.document" type="String" %}
 Alfanumérico del documento
 {% endswagger-parameter %}
 
@@ -59,23 +59,23 @@ Alfanumérico del documento
 RFC 5322
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="product.title" %}
+{% swagger-parameter in="body" name="product.title" type="String" %}
 Nombre del producto/servicio
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.address" %}
+{% swagger-parameter in="body" name="billing.address" type="String" %}
 Dirección del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.city" %}
+{% swagger-parameter in="body" name="billing.city" type="String" %}
 Ciudad del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.region" %}
+{% swagger-parameter in="body" name="billing.region" type="String" %}
 Región del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.country" %}
+{% swagger-parameter in="body" name="billing.country" type="String" %}
 País del cliente
 {% endswagger-parameter %}
 
