@@ -39,7 +39,7 @@ Referencia del comercio
 Fecha límite de la orden
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.phone" type="String" %}
+{% swagger-parameter in="body" name="meta.client.phone" type="String" %}
 Formato E.123
 {% endswagger-parameter %}
 
@@ -47,35 +47,39 @@ Formato E.123
 Api token
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.documentType" type="String" %}
+{% swagger-parameter in="body" name="meta.client.documentType" type="String" %}
 Tipo de documento
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.document" type="String" %}
+{% swagger-parameter in="body" name="meta.client.document" type="String" %}
 Alfanumérico del documento
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="client.email" type="String" %}
+{% swagger-parameter in="body" name="meta.client.email" type="String" %}
 RFC 5322
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="product.title" type="String" %}
+{% swagger-parameter in="body" name="meta.client.name" type="Stng" %}
+Nombre del cliente
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="meta.product.title" type="String" %}
 Nombre del producto/servicio
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.address" type="String" %}
+{% swagger-parameter in="body" name="meta.billing.address" type="String" %}
 Dirección del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.city" type="String" %}
+{% swagger-parameter in="body" name="meta.billing.city" type="String" %}
 Ciudad del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.region" type="String" %}
+{% swagger-parameter in="body" name="meta.billing.region" type="String" %}
 Región del cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="billing.country" type="String" %}
+{% swagger-parameter in="body" name="meta.billing.country" type="String" %}
 País del cliente
 {% endswagger-parameter %}
 
