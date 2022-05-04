@@ -6,6 +6,10 @@ description: >-
 
 # Primeros pasos
 
+{% hint style="success" %}
+Únete a nuestro [espacio de Slack](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
+{% endhint %}
+
 ### 1. Registra tu compañía
 
 Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes nuestro [formulario de registro](https://dashboard.preauth.io/register).
@@ -75,7 +79,7 @@ preauth("init", {
 });
 ```
 
-Se deben definir el {{order\_id}} (obtenido en el paso 3) y las funciones que se ejecutarán en caso de error o éxito.
+Se deben definir el \{{order\_id\}} (obtenido en el paso 3) y las funciones que se ejecutarán en caso de error o éxito.
 
 #### 4.3 Muestra el widget
 

@@ -6,6 +6,10 @@ description: >-
 
 # API REST
 
+{% hint style="success" %}
+Únete a nuestro [espacio de Slack](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
+{% endhint %}
+
 ### Autenticación
 
 Para tener acceso a los servicios es necesario haber obtenido el api-token para ser usado como cabecera en cada petición. Para más información, puedes revisar como obtener el api-token en la guía de [Primeros pasos](primeros-pasos.md#2-verifica-que-tengas-tu-api-token).

@@ -4,6 +4,10 @@ description: Intégranos en tu página y disfruta de la magia.
 
 # Widget
 
+{% hint style="success" %}
+Únete a nuestro [espacio de Slack](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
+{% endhint %}
+
 ### Insertando SDK
 
 Con el siguiente script te aseguras que nuestro SDK sea cargado en tu web. Puedes hacerles pequeños cambios, pero te recomendamos no hacerlo.
