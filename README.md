@@ -5,5 +5,5 @@
 Para comenzar te recomendamos seguir nuestra guía de [Primeros pasos](primeros-pasos.md).
 
 {% hint style="success" %}
-Únete a nuestro [espacio de Slack](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
+Únete a nuestro [_<mark style="color:blue;">espacio de Slack</mark>_](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
 {% endhint %}
