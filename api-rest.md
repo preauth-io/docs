@@ -20,15 +20,19 @@ Cuando obtengas tu api-token, es necesario que lo envíes en la cabecera **"x-au
 
 {% swagger method="post" path="/order" baseUrl="https://api.preauth.io/v1" summary="Crear orden" %}
 {% swagger-description %}
+Servicio para crear una orden, con el id de la orden luego podrás realizar la retención utilizando el 
 
+[Widget](widget.md)
+
+ 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" required="true" name="country" type="String" %}
-ISO 3166-1 alpha-2
+ISO 3166-1 alpha-2 (Ej: PE, CL, MX)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="currency" type="String" %}
-ISO 4217
+ISO 4217 (Ej: PEN, CLP, MXN)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="amount" type="Integer" %}
@@ -40,7 +44,7 @@ Referencia del comercio
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="limit_date" type="String" %}
-Fecha límite de la orden
+Fecha límite de la orden (YYYY-mm-dd)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="meta.client.phone" type="String" %}
@@ -96,7 +100,7 @@ País del cliente
   "country": "PE",
   "limit_date": "2022-10-10",
   "amount": 15000,
-  "status": "in_progress",
+  "status": "created",
   "pending_amount": 15000,
   "captured_amount": 0,
   "created_at": "2021-10-15 20:31:07",
@@ -108,7 +112,9 @@ País del cliente
 
 {% swagger method="get" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Obtener orden" %}
 {% swagger-description %}
+Obtienes el objeto orden actualizado. Importante utilizarlo luego de recibir la confirmación de que se realizó la retención para verificar que la orden se encuentra en 
 
+`in_progress`
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
@@ -140,7 +146,13 @@ Id de la orden
 
 {% swagger method="patch" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Actualizar orden" %}
 {% swagger-description %}
+Modifica el monto o la fecha límite de una orden creada. Solo cuando esté en 
 
+`created`
+
+ o 
+
+`in_progress`
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
@@ -170,7 +182,9 @@ Fecha límite de la orden, se puede editar según la fecha de expiración de la 
 
 {% swagger method="delete" path="/order/{id}" baseUrl="https://api.preauth.io/v1" summary="Cancelar orden" %}
 {% swagger-description %}
+Devolverá el dinero retenido y la orden cambiará de estado a `canceled`.&#x20;
 
+¡Importante!, una vez cancelada una orden no puede cambiar a otro estado, tendrás que crear una nueva orden desde cero.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
@@ -192,7 +206,7 @@ Id de la orden
 
 {% swagger method="post" path="/order/{id}/capture" baseUrl="https://api.preauth.io/v1" summary="Capturar orden" %}
 {% swagger-description %}
-
+Cobra todo o parte del dinero retenido, adicionalmente nos indicas si el monto sobrante quieres seguir reteniéndolo o lo liberarás. Ej: si tienes reservado $1000 y cobras $100, ¿qué quieres hacer con los $900 sobrantes? puedes seguir bloqueándolos o liberarlos, dependiendo del caso de uso que tengas.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
