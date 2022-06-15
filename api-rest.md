@@ -28,11 +28,19 @@ Servicio para crear una orden, con el id de la orden luego podrás realizar la r
 {% endswagger-description %}
 
 {% swagger-parameter in="body" required="true" name="country" type="String" %}
-ISO 3166-1 alpha-2 (Ej: PE, CL, MX)
+
+
+[ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements)
+
+ (Ej: PE, CL, MX)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="currency" type="String" %}
-ISO 4217 (Ej: PEN, CLP, MXN)
+
+
+[ISO 4217](https://en.wikipedia.org/wiki/ISO_4217#Active_codes)
+
+ (Ej: PEN, CLP, MXN)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="amount" type="Integer" %}
@@ -48,7 +56,11 @@ Fecha límite de la orden (YYYY-mm-dd)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="meta.client.phone" type="String" %}
-Formato E.123
+Formato
+
+[ E.123](https://en.wikipedia.org/wiki/E.123#Example_formats)
+
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="x-auth-token" required="true" %}
