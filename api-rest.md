@@ -266,9 +266,10 @@ Flag para preautorizar el monto restante
 
 #### OrderStatus
 
-| Attributo    | Descripción                                                              |
-| ------------ | ------------------------------------------------------------------------ |
-| created      | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado. |
-| in\_progress | Cuando la orden ya cuenta con una tarjeta asociada.                      |
-| canceled     | Cuando el comercio solicitó la cancelación.                              |
-| finished     | Cuando la fecha límite ya pasó.                                          |
+| Attributo      | Descripción                                                                  |
+| -------------- | ---------------------------------------------------------------------------- |
+| created        | Cuando la orden ha sido creada y aún no tiene un medio de pago asociado.     |
+| in\_progress   | Cuando la orden ya cuenta con una tarjeta asociada.                          |
+| canceled       | Cuando el comercio solicitó la cancelación.                                  |
+| finished       | Cuando la fecha límite ya pasó.                                              |
+| desynchronized | Cuando la tarjeta asociada a la orden no puede ser preautorizada nuevamente. |
