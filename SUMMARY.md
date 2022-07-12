@@ -4,4 +4,4 @@
 * [Primeros pasos](primeros-pasos.md)
 * [API REST](api-rest.md)
 * [Widget](widget.md)
-* [Notificaciones](widget-1.md)
+* [Notificaciones](notificaciones.md)
