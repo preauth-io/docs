@@ -44,7 +44,7 @@ Servicio para crear una orden, con el id de la orden luego podrás realizar la r
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="amount" type="Integer" %}
-Monto en centavos
+Monto en la mínima denominación. Ejemplo: Dólares en centavos (para US$100, enviar 100000) y pesos chilenos en entero (para CLP$100, enviar 100)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" required="true" name="reference" type="String" %}
