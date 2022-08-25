@@ -11,3 +11,7 @@ Para comenzar te recomendamos seguir nuestra guía de [Primeros pasos](primeros-
 ## ¿Qué es Preauth?
 
 {% embed url="https://youtu.be/itERz7E4X1U" %}
+
+## **¿Cómo integrar Preauth?**
+
+{% embed url="https://www.youtube.com/watch?v=ZQCDIFojFrA" %}
