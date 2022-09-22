@@ -92,3 +92,7 @@ Por último, en esta pantalla podrás ver las credenciales que necesitamos.
 
 <figure><img src=".gitbook/assets/Screen Shot 2022-09-22 at 11.04.31.png" alt=""><figcaption><p>Credenciales de producción</p></figcaption></figure>
 
+{% hint style="info" %}
+La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
+{% endhint %}
+
