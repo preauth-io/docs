@@ -2,7 +2,7 @@
 description: Entérate cada vez que pasa algo con alguna de tus órdenes.
 ---
 
-# Notificaciones
+# Notificaciones/Webhooks
 
 {% hint style="success" %}
 Únete a nuestro [_<mark style="color:blue;">espacio de Slack</mark>_](https://join.slack.com/t/preauth-soporte/shared\_invite/zt-18pzujyy8-F6cZBsHmZ\_5OZFd16fnnWw) y te ayudaremos con tus dudas
@@ -33,6 +33,30 @@ Esto sucede cuando, por alguna razón, nos es imposible retomar una preautorizac
       "limit_date": "2022-10-10",
       "amount": 15000,
       "status": "desynchronized",
+      "pending_amount": 15000,
+      "captured_amount": 0,
+      "meta": {},
+      "created_at": "2021-10-15 20:31:07",
+      "updated_at": "2021-10-15 20:35:28"
+    }
+}
+```
+
+#### 2 Prueba de vida fallida
+
+Esto sucede cuando, por alguna razón, la tarjeta falla al autorizar. El comercio debe decidir si capturar la transacción autorizada o ponerse en contacto con el usuario.
+
+```javascript
+{
+   "type":"order.liveness.fail",
+   "order":{
+      "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
+      "reference": "order_00001",
+      "currency": "PEN",
+      "country": "PE",
+      "limit_date": "2022-10-10",
+      "amount": 15000,
+      "status": "in_progress",
       "pending_amount": 15000,
       "captured_amount": 0,
       "meta": {},
