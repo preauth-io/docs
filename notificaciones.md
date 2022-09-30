@@ -42,9 +42,9 @@ Esto sucede cuando, por alguna razón, nos es imposible retomar una preautorizac
 }
 ```
 
-#### 2 Prueba de vida fallida
+#### 2 Orden por desincronizarse
 
-Esto sucede cuando, por alguna razón, la tarjeta falla al autorizar. El comercio debe decidir si capturar la transacción autorizada o ponerse en contacto con el usuario.
+Esto sucede cuando, por alguna razón, la tarjeta falla al verificar su estado. El comercio debe decidir si capturar la transacción autorizada o ponerse en contacto con el usuario para tomarle una nueva tarjeta.
 
 ```javascript
 {
