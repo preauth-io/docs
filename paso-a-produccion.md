@@ -74,6 +74,18 @@ Luego, deben ingresar al [dashboard de Stripe](https://dashboard.stripe.com/apik
 
 <figure><img src=".gitbook/assets/Screen Shot 2022-09-22 at 10.46.56.png" alt=""><figcaption><p>Obtención de credenciales de Stripe</p></figcaption></figure>
 
+Debe obtener tanto la **Clave publicable** como la **Clave Secreta**. Sugerimos que se genere una nueva clave secreta de la siguiente manera:
+
+<figure><img src=".gitbook/assets/Screen Shot 2022-09-30 at 13.03.42.png" alt=""><figcaption><p>Click a Crear clave secreta</p></figcaption></figure>
+
+Luego, ingrese el Nombre de la clave (Sugerencia: Preauth, para que luego sea fácil identificarla)&#x20;
+
+<figure><img src=".gitbook/assets/Screen Shot 2022-09-30 at 13.04.41.png" alt=""><figcaption><p>Ingresar Nombre de la clave</p></figcaption></figure>
+
+Por último, copie y pegue en el formulario de Preauth la clave secreta. No olvides enviar esta información vía [privnote](https://privnote.com/) para evitar cualquier filtración de datos.
+
+<figure><img src=".gitbook/assets/Screen Shot 2022-09-30 at 13.07.18.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
 {% endhint %}
