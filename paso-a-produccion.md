@@ -32,6 +32,8 @@ En caso no sepas quien es tu POC escríbele a [sebastian@preauth.io](mailto:seba
 
 [Mercadopago](paso-a-produccion.md#mercadopago)
 
+[Conekta](paso-a-produccion.md#undefined)
+
 {% hint style="info" %}
 La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
 {% endhint %}
@@ -108,3 +110,20 @@ Por último, en esta pantalla podrás ver las credenciales que necesitamos.
 La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
 {% endhint %}
 
+### Conekta
+
+Para obtener las credenciales de conekta debes ingresar al panel administrativo desde: [https://panel.conekta.com/](https://panel.conekta.com/)
+
+Luego, ingresas a la sección de desarrolladores para poder ingresar a "Consultar API Keys de producción"
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption><p>Consultar API Keys de producción</p></figcaption></figure>
+
+Por último, te aparecerá una ventana con tus credenciales, ojo que solo podrás obtenerlos una vez, la próxima tendrás que regenerarlos.
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption><p>API Keys</p></figcaption></figure>
+
+Por último, copia y pega en el formulario de Preauth la clave secreta. No olvides enviar esta información vía [privnote](https://privnote.com/) para evitar cualquier filtración de datos.
+
+{% hint style="info" %}
+La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
+{% endhint %}

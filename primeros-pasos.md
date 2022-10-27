@@ -22,7 +22,7 @@ Para comenzar a usar nuestro [API REST](api-rest.md) es necesario que completes 
 
 Verifica que tengas un api-token en el [apartado para desarrolladores](https://dashboard.preauth.io/panel/devs).
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (1) (1).png>)
 
 ### 3. Crea tu primera orden
 
