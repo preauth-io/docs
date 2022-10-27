@@ -110,7 +110,7 @@ Por último, en esta pantalla podrás ver las credenciales que necesitamos.
 La información de tu procesador debes enviarla a [https://forms.gle/vuiaaBLRrUDCWJUb8](https://forms.gle/vuiaaBLRrUDCWJUb8)
 {% endhint %}
 
-### Conekta
+### Conekta <a href="#conekta" id="conekta"></a>
 
 Para obtener las credenciales de conekta debes ingresar al panel administrativo desde: [https://panel.conekta.com/](https://panel.conekta.com/)
 
