@@ -65,3 +65,27 @@ Esto sucede cuando, por alguna razón, la tarjeta falla al verificar su estado. 
     }
 }
 ```
+
+#### 3 Orden capturada
+
+Esto sucede cuando se ha ejecutado el cobro parcial o total del monto autorizado.
+
+```javascript
+{
+   "type":"order.captured",
+    "order":{
+      "id": "4085-whOdSyS2FkGmm4j9feJNeMh0SjQDgLa5xAUENBkajsfQK",
+      "reference": "order_00001",
+      "currency": "PEN",
+      "country": "PE",
+      "limit_date": "2022-10-10",
+      "amount": 15000,
+      "status": "in_progress",
+      "pending_amount": 10000,
+      "captured_amount": 5000,
+      "meta": {},
+      "created_at": "2021-10-15 20:31:07",
+      "updated_at": "2021-10-15 20:35:28"
+  }
+}
+```
