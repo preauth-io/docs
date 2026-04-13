@@ -103,6 +103,42 @@ Región del cliente
 País del cliente
 {% endswagger-parameter %}
 
+{% swagger-parameter in="body" name="card_id" type="Integer" %}
+Id de una tarjeta previamente tokenizada. Al enviarlo, la orden se crea y se autoriza automáticamente sin necesidad de usar el Widget. No se puede usar junto con `card`.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card" type="Object" %}
+Objeto con los datos de una tarjeta tokenizada por el procesador de pagos. Al enviarlo, la orden se crea y se autoriza automáticamente sin necesidad de usar el Widget. No se puede usar junto con `card_id`.
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.provider" type="String" required="true" %}
+Código del procesador de pagos (ej: stripe, mercadopago, izipay)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.reference" type="String" required="true" %}
+Referencia/token de la tarjeta en el procesador
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.bin" type="String" required="true" %}
+Primeros 6 dígitos de la tarjeta
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.last4" type="String" required="true" %}
+Últimos 4 dígitos de la tarjeta
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.month" type="Integer" required="true" %}
+Mes de expiración (1-12)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.year" type="Integer" required="true" %}
+Año de expiración (YYYY)
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="card.brand" type="String" required="true" %}
+Marca de la tarjeta: visa, mastercard, amex, diners, discover, jcb
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="Modelo Order" %}
 ```javascript
 {
